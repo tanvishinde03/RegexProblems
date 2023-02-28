@@ -13,9 +13,7 @@ namespace RegexProblems
             RegexProgram regex = new RegexProgram();
             regex.ValidateFirstName("Tanvi");
             regex.ValidateLastName("Shinde");
-
-
-
+            regex.ValidateEmail("tanvi.shinde@gmail.co.in");
         }
     }
 }
