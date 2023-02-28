@@ -89,7 +89,7 @@ namespace RegexProblems
                 Console.WriteLine("Numeric password is not matching with Regex");
             }
         }
-        public void ValidateNumericPassword(string numPassword)
+        public void ValidateNumericPassword(string numPassword)               //UC7
         {
             string password = "[a-zA-Z][0-9]{1,}";
             if (Regex.IsMatch(numPassword, password))
