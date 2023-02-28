@@ -51,6 +51,19 @@ namespace RegexProblems
             {
                 Console.WriteLine("Email is not matching Regex ");
             }
+        }
+        public void ValidatePhoneNumber(string phoneNumber)
+        {
+            //"91 9988123456"
+            string phoneNum = @"[0-9]{2}[ ][0-9]{10}";  //@"[0-9]{2}/s[0-9]{10}" Both are correct expressions
+            if (Regex.IsMatch(phoneNumber, phoneNum))
+            {
+                Console.WriteLine("Phone Number is matching with regex");
+            }
+            else
+            {
+                Console.WriteLine("Phone Number is not matching with Regex ");
+            }
             Console.ReadLine();
         }
     }
