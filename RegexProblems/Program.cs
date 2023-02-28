@@ -15,6 +15,7 @@ namespace RegexProblems
             regex.ValidateLastName("Shinde");
             regex.ValidateEmail("tanvi.shinde@gmail.co.in");
             regex.ValidatePhoneNumber("91 8007622250");
+            regex.ValidatePassword("Password");
         }
     }
 }
