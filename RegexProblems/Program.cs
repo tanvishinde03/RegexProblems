@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace RegexProblems
@@ -18,6 +19,7 @@ namespace RegexProblems
             regex.ValidatePassword("Password");
             regex.ValidateStringPassword("Tanvi123");
             regex.ValidateNumericPassword("tanU003");
+            regex.ValidateSpecialCharacter("tanu@");
         }
     }
 }
