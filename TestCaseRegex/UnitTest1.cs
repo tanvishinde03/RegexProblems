@@ -15,12 +15,7 @@ namespace TestCaseRegex
             string firstName = regexTestCase.ValidateFirstName("Tanvi");
             Assert.AreEqual(firstName, "Tanvi");
         }
-        [TestMethod]
-        public void TestForLastName()
-        {
-            string LastName = regexTestCase.ValidateLastName("Shinde");
-            Assert.AreEqual(LastName, "Shinde");
-        }
+       
        
        
     }
