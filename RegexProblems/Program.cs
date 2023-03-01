@@ -20,6 +20,7 @@ namespace RegexProblems
             regex.ValidateStringPassword("Tanvi123");
             regex.ValidateNumericPassword("tanU003");
             regex.ValidateSpecialCharacter("tanu@");
+            Console.ReadLine();
         }
     }
 }
