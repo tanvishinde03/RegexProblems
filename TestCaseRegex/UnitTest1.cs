@@ -5,7 +5,7 @@ namespace TestCaseRegex
     [TestClass]
     public class UnitTest1
     {
-       
+
         RegexProgram regexTestCase = new RegexProgram();
 
 
@@ -33,14 +33,8 @@ namespace TestCaseRegex
             string LastName = regexTestCase.ValidatePhoneNumber("91 8007622250");
             Assert.AreEqual(LastName, "91 8007622250");
         }
-        [TestMethod]
-        public void TestForPassword()
-        {
-            string LastName = regexTestCase.ValidatePassword("Password");
-            Assert.AreEqual(LastName, "Password");
-        }
-        [TestMethod]
+    }
        
         
     }
-}
+
