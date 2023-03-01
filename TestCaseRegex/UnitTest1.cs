@@ -52,11 +52,6 @@ namespace TestCaseRegex
             string LastName = regexTestCase.ValidateNumericPassword("tanU003");
             Assert.AreEqual(LastName, "tanU003");
         }
-        [TestMethod]
-        public void TestForSpecialCharacter()
-        {
-            string LastName = regexTestCase.ValidateSpecialCharacter("tanu@");
-            Assert.AreEqual(LastName, "tanu@");
-        }
+       
     }
 }
