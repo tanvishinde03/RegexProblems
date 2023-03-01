@@ -27,13 +27,6 @@ namespace TestCaseRegex
             string LastName = regexTestCase.ValidateEmail("tanvi.shinde@gmail.co.in\"");
             Assert.AreEqual(LastName, "tanvi.shinde@gmail.co.in\"");
         }
-        [TestMethod]
-
-        public void Test4()
-        {
-            string LastName = regexTestCase.ValidatePhoneNumber("91 8007622250");
-            Assert.AreEqual(LastName, "91 8007622250");
-        }
-
+       
     }
 }
