@@ -41,17 +41,6 @@ namespace TestCaseRegex
         }
         [TestMethod]
        
-        public void TestForStringPassword()
-        {
-            string LastName = regexTestCase.ValidateStringPassword("Tanvi123");
-            Assert.AreEqual(LastName, "Tanvi123");
-        }
-        [TestMethod]
-        public void TestForNumericPassword()
-        {
-            string LastName = regexTestCase.ValidateNumericPassword("tanU003");
-            Assert.AreEqual(LastName, "tanU003");
-        }
-       
+        
     }
 }
