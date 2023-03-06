@@ -11,7 +11,7 @@ namespace RegexProblems
     {
         static void Main(string[] args)
         {
-            RegexProgram regex = new RegexProgram();
+            RegexProgram regex = new RegexProgram(null);
             regex.ValidateFirstName("Tanvi");
             regex.ValidateLastName("Shinde");
             regex.ValidateEmail("tanvi.shinde@gmail.co.in");

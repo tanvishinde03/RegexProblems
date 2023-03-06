@@ -1,30 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
+using static RegexProblems.UserRegistratinException;
 namespace RegexProblems
 {
     public class RegexProgram
     {
+        string message;
+        public RegexProgram(string message)
+        {
+            this.message = message;
+        }
 
         public string ValidateFirstName(string name)
         {
-            //Tanvi
             string firstName = "^[A-Z][a-z]{3,}?";
-            if (Regex.IsMatch(name, firstName))
-            {
+            try
+            {  
+                    if (Regex.IsMatch(name, firstName))
+                    {
 
-                Console.WriteLine("first Name is matching with Regex ");
-            }
-            else
+                        Console.WriteLine("first Name is matching with Regex ");
+                    }
+                    else
+                    {
+                        Console.WriteLine("first Name is not matching with Regex");
+                    }
+                    return name;
+                }
+            catch (NullReferenceException)
             {
-                Console.WriteLine("first Name is not matching with Regex");
+                throw new UserRegistratinException(ExceptionType.NULL_FIRSTNAME, "Please do not Enter the Null Input");
             }
-            return name;
-        }
+                  
+            }
+            
+            
         public string ValidateLastName(string name)
         {
             //Shinde
