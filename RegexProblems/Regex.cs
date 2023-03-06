@@ -173,6 +173,8 @@ namespace RegexProblems
         public string ValidateSpecialCharacter(string character)
         {
             string spclChar = "[0-9a-zA-Z][!@#$%&*]{1}";
+            try
+            { 
             if (Regex.IsMatch(character, spclChar))
             {
                 Console.WriteLine("Special Character is matched with Regex");
@@ -182,8 +184,13 @@ namespace RegexProblems
                 Console.WriteLine("Special Character is not matched with Regex");
             }
             return character;
-
         }
+         catch (NullReferenceException)
+            {
+                throw new UserRegistratinException(ExceptionType.NULL_SPECIALCHAR, "Please do not Enter the Null Input");
+    }
+
+}
     }
 
 

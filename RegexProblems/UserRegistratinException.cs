@@ -17,6 +17,7 @@ namespace RegexProblems
             NULL_PASSWORD,
             NULL_PASSWORDRULE2,
             NULL_PASSWORDRULE3,
+            NULL_SPECIALCHAR,
         }
         public ExceptionType Type;
         public UserRegistratinException(ExceptionType Type,string message): base (message)

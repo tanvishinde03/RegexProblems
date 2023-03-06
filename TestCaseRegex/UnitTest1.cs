@@ -94,5 +94,17 @@ namespace TestCaseRegex
                 Assert.AreEqual("Please do not Enter the Null Input", obj.Message);
             }
         }
+        [TestMethod]
+        public void Given_Empty_SPECIALCHAR_Should_Throw_UserRegistrationException_Indicating_EmptyInput()
+        {
+            try
+            {
+                string result = regexTestCase.ValidateFirstName("tanU003");
+            }
+            catch (UserRegistratinException obj)
+            {
+                Assert.AreEqual("Please do not Enter the Null Input", obj.Message);
+            }
+        }
     }
 }
