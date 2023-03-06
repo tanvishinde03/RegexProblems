@@ -64,7 +64,7 @@ namespace RegexProblems
 
         public string ValidateEmail(string email)
         {
-            //abc.xyz@bridgelabz.co.in
+            
             string emailID = "^[a-zA-Z]+[.+_-]{0,1}[a-z]+[@][a-zA-Z]+[.][a-z]{2,3}([.][a-z]{2}){0,1}$";
             try
             {
@@ -89,8 +89,8 @@ namespace RegexProblems
         {
             //"91 9988123456"
             string phoneNum = @"[0-9]{2}[ ][0-9]{10}";  //@"[0-9]{2}/s[0-9]{10}" Both are correct expressions
-            try
-            {
+            
+            
                 if (Regex.IsMatch(phoneNumber, phoneNum))
                 {
                     Console.WriteLine("Phone Number is matching with regex");
@@ -100,11 +100,6 @@ namespace RegexProblems
                     Console.WriteLine("Phone Number is not matching with Regex ");
                 }
                 return phoneNumber;
-            }
-            catch (NullReferenceException)
-            {
-                throw new UserRegistratinException(ExceptionType.NULL_PHONENUMBER, "Please do not Enter the Null Input");
-            }
         }
     
         public string ValidatePassword(string pswrd)
