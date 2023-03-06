@@ -11,7 +11,7 @@ namespace RegexProblems
         public enum ExceptionType
         {
             NULL_FIRSTNAME,
-            
+            NULL_LASTNAME,
         }
         public ExceptionType Type;
         public UserRegistratinException(ExceptionType Type,string message): base (message)

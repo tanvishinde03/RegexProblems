@@ -38,23 +38,31 @@ namespace RegexProblems
             }
                   
             }
-            
-            
+
+
         public string ValidateLastName(string name)
         {
             //Shinde
             string lastName = "^[A-Z][a-z]{3,}?";
-            if (Regex.IsMatch(name, lastName))
+            try
             {
-                Console.WriteLine("Last name is matching with Regex");
+                if (Regex.IsMatch(name, lastName))
+                {
+                    Console.WriteLine("Last name is matching with Regex");
+                }
+                else
+                {
+                    Console.WriteLine("Last Name is not matching with Regex");
+                }
+                return name;
             }
-            else
+            catch (NullReferenceException)
             {
-                Console.WriteLine("Last Name is not matching with Regex");
+                throw new UserRegistratinException(ExceptionType.NULL_LASTNAME, "Please do not Enter the Null Input");
             }
-            return name;
         }
-        public string ValidateEmail(string email)
+
+    public string ValidateEmail(string email)
         {
             //abc.xyz@bridgelabz.co.in
             string emailID = "^[a-zA-Z]+[.+_-]{0,1}[a-z]+[@][a-zA-Z]+[.][a-z]{2,3}([.][a-z]{2}){0,1}$";
