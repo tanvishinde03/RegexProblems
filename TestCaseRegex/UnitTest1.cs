@@ -46,6 +46,5 @@ namespace TestCaseRegex
                 Assert.AreEqual("Please do not Enter the Null Input", obj.Message);
             }
         }
-
-        }
+    }
 }
