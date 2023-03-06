@@ -62,22 +62,30 @@ namespace RegexProblems
             }
         }
 
-    public string ValidateEmail(string email)
+        public string ValidateEmail(string email)
         {
             //abc.xyz@bridgelabz.co.in
             string emailID = "^[a-zA-Z]+[.+_-]{0,1}[a-z]+[@][a-zA-Z]+[.][a-z]{2,3}([.][a-z]{2}){0,1}$";
-
-            if (Regex.IsMatch(email, emailID))
+            try
             {
-                Console.WriteLine("Email is matching with Regex");
+                if (Regex.IsMatch(email, emailID))
+                {
+                    Console.WriteLine("Email is matching with Regex");
+                }
+                else
+                {
+                    Console.WriteLine("Email is not matching Regex ");
+                }
+                return email;
             }
-            else
+            catch (NullReferenceException)
             {
-                Console.WriteLine("Email is not matching Regex ");
+                throw new UserRegistratinException(ExceptionType.NULL_MAIL_ID, "Please do not Enter the Null Input");
             }
-            return email;
         }
-        public string ValidatePhoneNumber(string phoneNumber)
+
+    
+    public string ValidatePhoneNumber(string phoneNumber)
         {
             //"91 9988123456"
             string phoneNum = @"[0-9]{2}[ ][0-9]{10}";  //@"[0-9]{2}/s[0-9]{10}" Both are correct expressions

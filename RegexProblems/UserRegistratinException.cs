@@ -12,6 +12,7 @@ namespace RegexProblems
         {
             NULL_FIRSTNAME,
             NULL_LASTNAME,
+            NULL_MAIL_ID,
         }
         public ExceptionType Type;
         public UserRegistratinException(ExceptionType Type,string message): base (message)
