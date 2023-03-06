@@ -13,6 +13,7 @@ namespace RegexProblems
             NULL_FIRSTNAME,
             NULL_LASTNAME,
             NULL_MAIL_ID,
+            NULL_PHONENUMBER,
         }
         public ExceptionType Type;
         public UserRegistratinException(ExceptionType Type,string message): base (message)

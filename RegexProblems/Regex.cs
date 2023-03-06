@@ -89,16 +89,24 @@ namespace RegexProblems
         {
             //"91 9988123456"
             string phoneNum = @"[0-9]{2}[ ][0-9]{10}";  //@"[0-9]{2}/s[0-9]{10}" Both are correct expressions
-            if (Regex.IsMatch(phoneNumber, phoneNum))
+            try
             {
-                Console.WriteLine("Phone Number is matching with regex");
+                if (Regex.IsMatch(phoneNumber, phoneNum))
+                {
+                    Console.WriteLine("Phone Number is matching with regex");
+                }
+                else
+                {
+                    Console.WriteLine("Phone Number is not matching with Regex ");
+                }
+                return phoneNumber;
             }
-            else
+            catch (NullReferenceException)
             {
-                Console.WriteLine("Phone Number is not matching with Regex ");
+                throw new UserRegistratinException(ExceptionType.NULL_PHONENUMBER, "Please do not Enter the Null Input");
             }
-            return phoneNumber;
         }
+    
         public string ValidatePassword(string pswrd)
         {
             string password = @"[A-Z]{1}[a-z0-9]";
