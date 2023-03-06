@@ -15,6 +15,7 @@ namespace RegexProblems
             NULL_MAIL_ID,
             NULL_PHONENUMBER,
             NULL_PASSWORD,
+            NULL_PASSWORDRULE2,
         }
         public ExceptionType Type;
         public UserRegistratinException(ExceptionType Type,string message): base (message)

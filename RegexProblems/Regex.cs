@@ -132,6 +132,8 @@ namespace RegexProblems
         public string ValidateStringPassword(string numPassword)
         {
             string password = "[A-Z]{1,}[a-z0-9]";
+            try
+            { 
             if (Regex.IsMatch(numPassword, password))
             {
                 Console.WriteLine("Numeric Password is matching with Regex");
@@ -142,7 +144,12 @@ namespace RegexProblems
             }
             return numPassword;
         }
-        public string ValidateNumericPassword(string numPassword)               //UC7
+        catch (NullReferenceException)
+            {
+                throw new UserRegistratinException(ExceptionType.NULL_PASSWORDRULE2, "Please do not Enter the Null Input");
+    }
+}
+public string ValidateNumericPassword(string numPassword)               //UC7
         {
             string password = "[a-zA-Z][0-9]{1,}";
             if (Regex.IsMatch(numPassword, password))
