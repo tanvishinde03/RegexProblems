@@ -46,6 +46,29 @@ namespace TestCaseRegex
                 Assert.AreEqual("Please do not Enter the Null Input", obj.Message);
             }
         }
-       
+        [TestMethod]
+        public void Given_Empty_PHONENUMBER_Should_Throw_UserRegistrationException_Indicating_EmptyInput()
+        {
+            try
+            {
+                string result = regexTestCase.ValidateFirstName("91 8007622250");
+            }
+            catch (UserRegistratinException obj)
+            {
+                Assert.AreEqual("Please do not Enter the Null Input", obj.Message);
+            }
+        }
+        [TestMethod]
+        public void Given_Empty_PASSWORD_Should_Throw_UserRegistrationException_Indicating_EmptyInput()
+        {
+            try
+            {
+                string result = regexTestCase.ValidateFirstName("password");
+            }
+            catch (UserRegistratinException obj)
+            {
+                Assert.AreEqual("Please do not Enter the Null Input", obj.Message);
+            }
+        }
     }
 }

@@ -84,13 +84,14 @@ namespace RegexProblems
             }
         }
 
-    
-    public string ValidatePhoneNumber(string phoneNumber)
+
+        public string ValidatePhoneNumber(string phoneNumber)
         {
             //"91 9988123456"
             string phoneNum = @"[0-9]{2}[ ][0-9]{10}";  //@"[0-9]{2}/s[0-9]{10}" Both are correct expressions
-            
-            
+
+            try
+            {
                 if (Regex.IsMatch(phoneNumber, phoneNum))
                 {
                     Console.WriteLine("Phone Number is matching with regex");
@@ -100,20 +101,33 @@ namespace RegexProblems
                     Console.WriteLine("Phone Number is not matching with Regex ");
                 }
                 return phoneNumber;
+            }
+            catch (NullReferenceException)
+            {
+                throw new UserRegistratinException(ExceptionType.NULL_PHONENUMBER, "Please do not Enter the Null Input");
+            }
         }
-    
+
+
         public string ValidatePassword(string pswrd)
         {
             string password = @"[A-Z]{1}[a-z0-9]";
-            if (Regex.IsMatch(pswrd, password))
+            try
             {
-                Console.WriteLine("Password is matching with Regex");
+                if (Regex.IsMatch(pswrd, password))
+                {
+                    Console.WriteLine("Password is matching with Regex");
+                }
+                else
+                {
+                    Console.WriteLine("Password is not matching with Regex");
+                }
+                return pswrd;
             }
-            else
+            catch (NullReferenceException)
             {
-                Console.WriteLine("Password is not matching with Regex");
+                throw new UserRegistratinException(ExceptionType.NULL_PASSWORD, "Please do not Enter the Null Input");
             }
-            return pswrd;
         }
         public string ValidateStringPassword(string numPassword)
         {
